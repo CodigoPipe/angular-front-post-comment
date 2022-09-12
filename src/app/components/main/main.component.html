@@ -1,0 +1,21 @@
+<h2>Feel free to post your thoughts</h2>
+
+<label for="Title">Title: </label>
+<input name="Title" type="text" [(ngModel)]="newTitle" placeholder="Title"> <br>
+
+<label for="Author">Author: </label>
+<input name="Author"type="text" [(ngModel)]="newAuthor" placeholder="Author"> <br />
+<button (click)="submitPost()">Submit</button> <br>
+
+
+<div *ngIf="posts">
+
+    <div *ngFor="let post of posts">
+
+    <app-sigle-post [post] = "post">
+
+    </app-sigle-post>
+
+    </div>
+
+</div>
