@@ -1,4 +1,7 @@
-<h2>Feel free to post your thoughts</h2>
+
+<div id="numero">
+
+    <h2>Feel free to post your thoughts</h2>
 
 <label for="Title">Title: </label>
 <input name="Title" type="text" [(ngModel)]="newTitle" placeholder="Title"> <br>
@@ -6,6 +9,9 @@
 <label for="Author">Author: </label>
 <input name="Author"type="text" [(ngModel)]="newAuthor" placeholder="Author"> <br />
 <button (click)="submitPost()">Submit</button> <br>
+
+</div>
+
 
 
 <div *ngIf="posts">

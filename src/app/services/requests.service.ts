@@ -15,15 +15,15 @@ export class RequestsService {
   };
 
   bringAllPost(): Observable<Post[]>{
-    return this.client.get<Post[]>("http://localhost:8081/bring/all/posts")
+    return this.client.get<Post[]>("https://tranquil-shelf-46613.herokuapp.com/bring/all/posts")
   }
 
   createPostAction(command:CreatePostCommand): Observable<Object>{
-    return this.client.post("http://localhost:8080/create/post", command, this.httpOptions)
+    return this.client.post("https://glacial-cliffs-59385.herokuapp.com/create/post", command, this.httpOptions)
   }
 
   createCommentAction(command:CreateCommentCommand): Observable<Object>{
-    return this.client.post("http://localhost:8080/add/comment", command, this.httpOptions)
+    return this.client.post("https://glacial-cliffs-59385.herokuapp.com/add/comment", command, this.httpOptions)
   }
 
 

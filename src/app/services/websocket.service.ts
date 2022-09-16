@@ -12,13 +12,13 @@ export class WebsocketService {
 
   getPostBySocket():WebSocketSubject<Post>{
 
-    return webSocket('ws://localhost:8082/retrieve/mainSpace')
+    return webSocket('WSS://warm-basin-77432.herokuapp.com//retrieve/mainSpace')
 
   }
 
   getCommentBySocket(postId:string|undefined):WebSocketSubject<CommentType>{
 
-    return webSocket(`ws://localhost:8082//retrieve//${postId}`)
+    return webSocket(`WSS://warm-basin-77432.herokuapp.com///retrieve//${postId}`)
 
   }
 

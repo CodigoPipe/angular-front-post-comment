@@ -1,5 +1,17 @@
 h1{
+    padding: 2.9rem;
+    margin: 0;
+    background-color: #6F3D74;
+    color: white;
+    text-align: center;
     font-style: italic;
-    font-size: 2.3rem;
-    color: aqua;
+    font-size: 2.8rem;
+
 }
+
+#header{
+    width: 100%;
+    background-color: red;
+    justify-content: center;
+    align-content: center;
+  }
