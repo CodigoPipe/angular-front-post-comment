@@ -1,17 +1,33 @@
-#h1-principal-page{
-    padding: 2.2rem;
-    margin-bottom: 40px;
-    background-color: #6F3D74;
-    color: white;
-    text-align: center;
-    font-style: italic;
-    font-size: 2.8rem;
+#log-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 
-#header-main{
-    width: 100%;
-    background-color: red;
-    justify-content: center;
-    align-content: center;
-  }
+#btn-login{
+
+    position: relative;
+    text-align: center;
+    width: 24rem;
+    padding: 2.5rem;
+    height: 9rem;
+    font-size: 1.8rem;
+    color: #6f3d74;
+    font-family: poppins;
+    font-weight: 600;
+    border: 3px solid #6f3d74;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    cursor: pointer;
+    border-radius: 80px;
+    transition: .3s;
+    background-color: #C3D5F1;
+
+}
+
+#btn-login:hover{
+
+    box-shadow: 0 5px 5px 0 #6f3d74 inset, 0 5px 5px 0 #6f3d74,
+                0 5px 5px 0 #6f3d74 inset, 0 5px 5px 0 #6f3d74;
+}
