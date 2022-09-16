@@ -1,5 +1,70 @@
-#numero{
+
+#post-container{
+    border: 2px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#post-creator{
+
+    border: 2px solid blue;
     text-align: center;
-    background-color:  #CFDCF1;
-    padding: 2.9rem;
+}
+
+#posts-bringed{
+
+    border: 2px solid blue; 
+
+}
+
+#h2-post-creator{
+
+    font-size: 2.188rem;
+    font-style: oblique;
+    color: purple;
+}
+
+.input-post-creator{
+
+    margin: 15px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    background-color: #cfdcf1;
+    width: 25vw;
+
+
+}
+
+.input-post-creator:focus{
+    outline: none;
+}
+
+
+.btn-post-creator{
+
+    margin-top: 10px;
+    width: 7.4rem;
+    height: 2.8rem;
+    font-size: 1.2rem;
+    color: #6f3d74;
+    font-family: poppins;
+    font-weight: 600;
+    border: 1px solid #6f3d74;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    cursor: pointer;
+    border-radius: 80px;
+    transition: .3s;
+    background-color: #C3D5F1;
+
+}
+
+.btn-post-creator:hover{
+
+    box-shadow: 0 1.9px 1.9px 0 #6f3d74 inset, 0 1.9px 1.9px 0 #6f3d74,
+                0 1.9px 1.9px 0 #6f3d74 inset, 0 1.9px 1.9px 0 #6f3d74;
 }

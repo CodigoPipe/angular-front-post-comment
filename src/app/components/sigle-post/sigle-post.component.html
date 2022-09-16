@@ -1,25 +1,20 @@
-<div class="container">
+
+
+<div id="container">
   <h3>Title: {{ post?.title }}</h3>
   <h6>Author: {{ post?.author }}</h6>
 
-  <label for="Author">Author: </label>
-  <input
-    name="Author"
-    type="text"
-    [(ngModel)]="newAuthor"
-    placeholder="Title"
-  />
+  <!-- <label for="Author">Author: </label> -->
+  <p>Leave a comment to this post</p>
+
+  <input class="comment-input" name="Author" type="text" [(ngModel)]="newAuthor" placeholder="Title"/>
   <br />
 
-  <label for="Content">Content: </label>
-  <input
-    name="Content"
-    type="text"
-    [(ngModel)]="newContent"
-    placeholder="Author"
-  />
+  <!-- <label for="Content">Content: </label> -->
+  <input class="comment-input"  name="Content" type="text" [(ngModel)]="newContent" placeholder="Author"/>
   <br />
-  <button (click)="submitComment()">Send Comment</button>
+
+  <button (click)="submitComment()" class="btn-send-comment">Send Comment</button>
 
   <div *ngIf="post?.comments">
     <div *ngFor="let comment of post?.comments" class="card">

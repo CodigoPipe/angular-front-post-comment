@@ -1,0 +1,17 @@
+h2 {
+  padding: 1.5rem;
+  margin: 0;
+  background-color: #6f3d74;
+  color: white;
+  text-align: center;
+  font-style: italic;
+  font-size: 2.2rem;
+}
+
+#footer {
+  width: 100%;
+  background-color: red;
+  justify-content: center;
+  align-content: center;
+  margin-top: 40px;
+}

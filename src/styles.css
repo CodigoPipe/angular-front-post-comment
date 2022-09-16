@@ -12,3 +12,10 @@ body {
   margin: 0px;
   padding: 0px;
 }
+
+h2,h3,h6,p{
+
+  font-family: 'Montserrat';
+  font-weight: 400;
+  
+}

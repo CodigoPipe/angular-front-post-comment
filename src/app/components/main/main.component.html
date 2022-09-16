@@ -1,27 +1,35 @@
 
-<div id="numero">
+<div id="post-container">
 
-    <h2>Feel free to post your thoughts</h2>
+    <div id="post-creator">
 
-<label for="Title">Title: </label>
-<input name="Title" type="text" [(ngModel)]="newTitle" placeholder="Title"> <br>
-
-<label for="Author">Author: </label>
-<input name="Author"type="text" [(ngModel)]="newAuthor" placeholder="Author"> <br />
-<button (click)="submitPost()">Submit</button> <br>
-
-</div>
-
-
-
-<div *ngIf="posts">
-
-    <div *ngFor="let post of posts">
-
-    <app-sigle-post [post] = "post">
-
-    </app-sigle-post>
-
+        <h2 id="h2-post-creator">Feel free to post your thoughts</h2>
+    
+    <!-- <label for="Title">Title: </label> -->
+    <input class="input-post-creator" name="Title" type="text" [(ngModel)]="newTitle" placeholder="Title"> <br>
+    
+    <!-- <label for="Author">Author: </label> -->
+    <input class="input-post-creator" name="Author"type="text" [(ngModel)]="newAuthor" placeholder="Author"> <br />
+    <button class="btn-post-creator" (click)="submitPost()">Submit</button> 
+    
+    
+    </div>
+    
+    
+    
+    <div *ngIf="posts" id="posts-bringed">
+    
+        <div *ngFor="let post of posts">
+    
+        <app-sigle-post [post] = "post">
+    
+        </app-sigle-post>
+    
+        </div>
+    
     </div>
 
+
+
 </div>
+
