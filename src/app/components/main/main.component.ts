@@ -6,6 +6,8 @@ import { WebSocketSubject } from 'rxjs/webSocket';
 
 import {Post} from "../../services/models"
 import { CreatePostCommand } from '../../services/models';
+import { StateService } from 'src/app/services/state.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main',
@@ -19,12 +21,20 @@ export class MainComponent implements OnInit {
   newAuthor:string = "";
   socketManager?:WebSocketSubject<Post>
 
-  constructor(private requests: RequestsService, private webSocket: WebsocketService) { }
+  constructor(private requests: RequestsService, private webSocket: WebsocketService, private state:StateService,
+    private router:Router) { }
+
 
   ngOnInit(): void {
-    this.bringPosts()
-    this.getPostFromSocket()
+    
+
+    if(this.validateLogin()){
+      this.bringPosts()
+      this.getPostFromSocket()
+    }
+
   }
+
 
   bringPosts(){
     this.requests.bringAllPost().subscribe(posts =>
@@ -40,7 +50,7 @@ export class MainComponent implements OnInit {
         title: this.newTitle
       }
 
-      this.requests.createPostAction(newCommand).subscribe();
+      this.requests.createPostAction(newCommand,this.availableState.token).subscribe();
 
       this.newTitle = ""
 
@@ -57,6 +67,27 @@ export class MainComponent implements OnInit {
     closeSocket(){
       this.socketManager?.complete()
     }
+
+    availableState:any 
+
+    validateLogin():boolean{
+      let validationResult = false;
+      this.state.state.subscribe(currentState =>
+        {
+      
+          this.availableState = currentState;
+          if(!currentState.logedIn){
+      
+            this.router.navigateByUrl('')
+            validationResult = false;
+            return
+          }
+          validationResult = true;
+        })
+      
+      return validationResult;
+      
+        }
 
 
 

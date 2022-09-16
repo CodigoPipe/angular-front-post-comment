@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "front-post-comments"
+  },
+  "targets": {
+    "front-post-comments": {
+      "hosting": {
+        "angular-front-post-comments": [
+          "front-post-comments"
+        ]
+      }
+    }
   }
 }

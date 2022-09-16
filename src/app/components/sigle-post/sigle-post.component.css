@@ -10,8 +10,8 @@
 }
 
 #container{
-    border: 2px solid #97b6e9;
-    box-shadow: 2px 2px 10px #97b6e9;
+    border: 1px solid #97b6e9;
+    box-shadow: 4px 4px 12px #97b6e9;
     border-radius: 12px;
     margin-top: .8rem;
     margin-bottom: .8rem;

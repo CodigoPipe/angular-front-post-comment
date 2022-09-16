@@ -3,6 +3,8 @@ import { Post } from 'src/app/services/models';
 import { Input } from '@angular/core';
 import { RequestsService } from 'src/app/services/requests.service';
 import { CreateCommentCommand } from 'src/app/services/models';
+import { StateService } from 'src/app/services/state.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sigle-post',
@@ -16,10 +18,32 @@ export class SiglePostComponent implements OnInit {
   newAuthor: string = ""
   newContent: string = ""
 
-  constructor(private requests: RequestsService) { }
+  constructor(private requests: RequestsService, private state:StateService, private router:Router) { }
 
   ngOnInit(): void {
+    this.validateLogin()
   }
+
+  validateLogin():boolean{
+    let validationResult = false;
+    this.state.state.subscribe(currentState =>
+      {
+    
+        this.availableState = currentState;
+        if(!currentState.logedIn){
+    
+          this.router.navigateByUrl('')
+          validationResult = false;
+          return
+        }
+        validationResult = true;
+      })
+    
+    return validationResult;
+    
+      }
+
+  availableState:any 
 
   submitComment(){
     const newCommand: CreateCommentCommand = {
@@ -29,7 +53,7 @@ export class SiglePostComponent implements OnInit {
       content: this.newContent
     }
 
-    this.requests.createCommentAction(newCommand).subscribe();
+    this.requests.createCommentAction(newCommand,this.availableState.token).subscribe();
 
     this.newAuthor = ""
 

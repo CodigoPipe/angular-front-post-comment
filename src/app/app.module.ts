@@ -10,6 +10,12 @@ import { MainComponent } from './components/main/main.component';
 import { SiglePostComponent } from './components/sigle-post/sigle-post.component';
 import { SingleCommentComponent } from './components/single-comment/single-comment.component';
 
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { AppRoutingModule } from './app-routing.module';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +28,10 @@ import { SingleCommentComponent } from './components/single-comment/single-comme
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
