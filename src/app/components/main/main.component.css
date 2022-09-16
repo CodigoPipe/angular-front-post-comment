@@ -1,22 +1,22 @@
 
 #post-container{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 20px;
+    gap: 3.75rem;
 }
 
 #post-creator{
 
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     text-align: center;
 }
 
 #posts-bringed{
 
-    border: 2px solid blue; 
+    /* border: 2px solid blue;  */
 
 }
 

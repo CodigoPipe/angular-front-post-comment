@@ -1,18 +1,20 @@
 .card{
-    background-color: #D7F1F2;
-    border: 1px solid #D7F1F2;
-    box-shadow: 1px 1px 5px #D7F1F2;
+    background-color: #aac3ec;
+    border: 1px solid #aac3ec;
+    box-shadow: 1px 1px 5px #aac3ec;
     border-radius: 7px;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
 }
 
 #container{
-    border: 2px solid #aec8f1;
-    box-shadow: 2px 2px 13px #aec8f1;
-    border-radius: 8px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    border: 2px solid #97b6e9;
+    box-shadow: 2px 2px 10px #97b6e9;
+    border-radius: 12px;
+    margin-top: .8rem;
+    margin-bottom: .8rem;
     margin-left: 10px;
     margin-right: 10px;
     text-align: center;
